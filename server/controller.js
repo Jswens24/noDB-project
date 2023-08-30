@@ -1,8 +1,8 @@
-
+import { data } from './data.js'
 
 const getPosts = (req, res) => {
-    console.log('hit');
+    return res.status(200).send(data)
 }
 
 
-module.exports = { getPosts }
+export default getPosts

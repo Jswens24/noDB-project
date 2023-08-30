@@ -45,7 +45,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+/* 
 html,
 body,
 div,
@@ -136,7 +136,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
+/* article,
 aside,
 details,
 figcaption,
@@ -176,3 +176,5 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+*/
