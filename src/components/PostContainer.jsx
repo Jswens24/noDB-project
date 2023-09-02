@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import { LinkDislikeWrapper, PostWrapper } from './PostContainer.style';
 
 const imgStyleTEMP = {
     height: '200px'
@@ -6,16 +8,19 @@ const imgStyleTEMP = {
 
 const PostContainer = ({ postObj }) => {
     return (
-        <div>
+        <PostWrapper>
             <h3>{postObj.username}</h3>
             <h1>{postObj.content}</h1>
-            <img style={imgStyleTEMP} src={postObj.imageUrl} alt='jawbreaker' />
-            <h5>Likes: {postObj.likeCount}</h5>
-            <h5>Dislike: {postObj.disLikeCount}</h5>
+            <img src={postObj.imageUrl} alt='jawbreaker' />
+            <LinkDislikeWrapper>
+                <h5>Likes: {postObj.likeCount}</h5>
+                <h5>Dislike: {postObj.disLikeCount}</h5>
+            </LinkDislikeWrapper>
+            <h4>Comments:</h4>
             {postObj.comments.map(el => {
-                return <h3 key={el}>{el}</h3>
+                return <p key={el}>{el}</p>
             })}
-        </div>
+        </PostWrapper>
     )
 }
 
