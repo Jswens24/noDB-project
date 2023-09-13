@@ -22,7 +22,6 @@ const Home = () => {
         <div>
             <h1>Posts</h1>
             {posts.length > 1 ? posts.map(el => {
-                console.log(el);
                 return <PostContainer key={el.postId} postObj={el} />
             }) : null
             }

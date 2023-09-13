@@ -5,11 +5,13 @@ import cors from 'cors';
 app.use(express.json());
 app.use(cors());
 
-import getPosts from './controller.js'
+import getPosts from './controller.js';
+import newPost from './controller.js';
 
 
 
-app.get('/api/getPosts', getPosts)
+app.get('/api/getPosts', getPosts);
+app.post('/api/newPost', newPost);
 
 
 
